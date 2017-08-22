@@ -92,7 +92,7 @@
                                         <h4><strong>Grand Total:</strong></h4>
                                     </td>
                                     <td class="text-center text-danger">
-                                        <h4><strong>$ ${grandTotal}</strong></h4>
+                                        <h4><strong>Rs. ${grandTotal}</strong></h4>
                                     </td>
                                 </tr>
 

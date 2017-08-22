@@ -8,5 +8,6 @@ public interface CartItemDao {
 	void removeCartItem(int cartItemId);
 	public void removeAllCartItem(int cartId);
 	public Cart getCart(int cartId);
-
+    public CartItem getCartItem(int CartId);
+    public CartItem getCartItemIDByCartID(int cartID);
 }

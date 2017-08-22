@@ -37,4 +37,14 @@ public class CartItemServiceImpl implements CartItemService{
 		return cartItemDao.getCart(cartId);
 	}
 
+	public CartItem getCartItem(int cartId) {
+		// TODO Auto-generated method stub
+		return cartItemDao.getCartItem(cartId);
+	}
+
+	public CartItem getCartItemIDByCartID(int cartID) {
+		// TODO Auto-generated method stub
+		return cartItemDao.getCartItemIDByCartID(cartID);
+	}
+
 }

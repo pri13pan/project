@@ -2,6 +2,7 @@ package com.niit.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,21 @@ public class CartItemDaoImpl implements CartItemDao {
 		Session session=sessionFactory.getCurrentSession();
 		Cart cart=(Cart)session.get(Cart.class, cartId);
 		return cart;
+	}
+
+	public CartItem getCartItem(int cartId) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		CartItem cart=(CartItem)session.get(CartItem.class, cartId);
+		return cart;
+	}
+
+	public CartItem getCartItemIDByCartID(int cartID) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from CartItem where cart=:cart_id").setInteger("cart_id",cartID);
+		List<CartItem> cartList=query.list();
+		return cartList.get(0);
 	}
 
 }
